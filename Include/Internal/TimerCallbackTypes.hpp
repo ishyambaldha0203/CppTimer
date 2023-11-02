@@ -1,7 +1,7 @@
 /*************************************************************************************************
  * @file TimerCallbackTypes.hpp
  *
- * @brief Type declarations for a the Timer callback function.
+ * @brief Type declarations for a the timer callback function.
  *************************************************************************************************/
 
 #ifndef _CPP_TIMER_INTERNAL_TIMERCALLBACKTYPES_HPP
@@ -14,7 +14,7 @@
 BEGIN_CPP_TIMER_NS
 namespace Internal
 {
-    using TimerCallback = std::function<void(int)>;
+    using TimerCallback = std::function<void()>;
 } // namespace Internal
 END_CPP_TIMER_NS
 

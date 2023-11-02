@@ -2,8 +2,7 @@
  * @file Timer.hpp
  *
  * @brief Declarations for the concrete class @ref Timer.
- *
- *************************************************************************************************/
+ * *************************************************************************************************/
 #ifndef _CPP_TIMER_INTERNAL_Timer_HPP
 #define _CPP_TIMER_INTERNAL_Timer_HPP
 
@@ -24,6 +23,12 @@ namespace Internal
      */
     class Timer : public Interfaces::ITimer
     {
+        // #region Type Aliases
+
+        using TimerConfig = Entities::TimerConfig;
+
+        // #endregion
+
     public:
         // #region Construction/Destruction
 
@@ -41,7 +46,11 @@ namespace Internal
 
         // #region ITimer Implementation
 
-        virtual void Start() override;
+        void LoadConfiguration(const TimerConfig& config) override;
+
+        void Start() override;
+
+        void Stop() override;
 
         // #endregion
 
@@ -49,6 +58,11 @@ namespace Internal
         DECLARE_NON_COPYABLE_CLASS(Timer)
 
         // #region Private Members
+
+        /**
+         * @brief All the configuration required for timer to execute.
+         */
+        TimerConfig _config;
 
         /**
          * @brief Keeps track of timer status.
@@ -59,6 +73,20 @@ namespace Internal
          * @brief To control the timer thread.
          */
         std::future<void> _future;
+
+        // #endregion
+
+        // #region Private Methods
+
+        /**
+         * @brief Execute timer in one shot mode.
+         */
+        void ExecuteInOneShotMode();
+
+        /**
+         * @brief Execute timer in periodic mode.
+         */
+        void ExecuteInPeriodicMode();
 
         // #endregion
     };

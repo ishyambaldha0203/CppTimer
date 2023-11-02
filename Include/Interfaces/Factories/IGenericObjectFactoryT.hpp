@@ -2,8 +2,8 @@
  * @file IGenericObjectFactoryT.hpp
  *
  * @brief Provides generic abstract factory to create concrete class instances all the classes.
- *
  *********************************************************************/
+
 #ifndef _CPP_TIMER_INTERFACES_FACTORIES_IGENERICOBJECTFACTORYT_HPP
 #define _CPP_TIMER_INTERFACES_FACTORIES_IGENERICOBJECTFACTORYT_HPP
 
@@ -15,7 +15,7 @@ namespace FactoryInterfaces
     /**
      * @interface IGenericObjectFactoryT
      *
-     * @brief Generic class that can be used to define a factory with a simple interface with Just Create.
+     * @brief Generic class that can be used to define a factory with a simple interface with just Create.
      *
      * Most of the factories can be implement in this way just by 'using'.
      *
@@ -34,13 +34,13 @@ namespace FactoryInterfaces
         using InterfaceSharedPointer = std::shared_ptr<TInterface>;
 
         /**
-         * @brief Create a concrete instance surfaced as pointer to its interfaces
+         * @brief Create a concrete instance surfaced as pointer to its interfaces.
          *
          * The interface is in the parameter so that can be used to change the signature of the Create without adding the name.
          *
          * @param[out] objectPtr pointer to the concrete class object referred through interface.
          */
-        virtual void Create(InterfaceSharedPointer& objectPtr) = 0;
+        virtual void Create(InterfaceSharedPointer &objectPtr) = 0;
     };
 } // namespace FactoryInterfaces
 END_CPP_TIMER_NS

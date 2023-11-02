@@ -2,8 +2,8 @@
  * @file IProgram.hpp
  *
  * @brief Interface to define member contracts for start-up class of application.
- *
  *************************************************************************************************/
+
 #ifndef _CPP_TIMER_INTERFACES_IPROGRAM_HPP
 #define _CPP_TIMER_INTERFACES_IPROGRAM_HPP
 

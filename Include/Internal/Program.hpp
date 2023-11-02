@@ -58,6 +58,20 @@ namespace Internal
         std::shared_ptr<Interfaces::ITimer> _timer;
 
         // #endregion
+
+        // #region Private Methods
+
+        /**
+         * @brief Function to demo OneShot timer mode.
+         */
+        void LoadOneShotTimerConfig();
+
+        /**
+         * @brief Function to test periodic mode of timer.
+         */
+        void LoadPeriodicTimerConfig();
+
+        // #endregion
     };
 } // namespace Internal
 END_CPP_TIMER_NS

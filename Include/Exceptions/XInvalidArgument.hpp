@@ -1,8 +1,9 @@
-/**
+/*************************************************************************************************
  * @file XInvalidArgument.hpp
- * @brief Contains the definition for a general InvalidArgument exception
  *
- */
+ * @brief Contains the definition for a general InvalidArgument exception
+*************************************************************************************************/
+
 #ifndef _CPP_TIMER_XINVALIDARGUMENT_HPP
 #define _CPP_TIMER_XINVALIDARGUMENT_HPP
 
@@ -55,6 +56,7 @@ namespace Exceptions
         Self &operator=(const Self &other) noexcept
         {
             Base::operator=(other);
+
             return *this;
         }
     };

@@ -10,9 +10,9 @@ C++ Timer: A versatile timer class with callback function support.
 - **CMake is used as the build system.**
 - **C++17 is used for development.** 
 
-## Brief of Project Components
-- **Timer Class:** The Timer class is a versatile and easy-to-use utility for scheduling tasks to run after a delay or at regular intervals. It provides a simple interface for loading a configuration, starting the timer, and stopping it.
-- **Program class:** Is being used to demo all the timer functionalities.
+## Overview of Project Components
+- **Timer Class:** The Timer class is a key component of this project. It’s a versatile utility designed to schedule tasks to run after a specified delay or at regular intervals. It offers a simple interface for loading configurations, starting the timer, and stopping it. This class is perfect for any application that requires timed or repeated tasks.
+- **Program Class:** The Program class serves as a demonstration of the Timer class functionalities. It provides practical examples of how to use the Timer class effectively in your code. By examining the Program class, you can gain insights into how to integrate and use the Timer class in your own projects.
 
 ## Directory Structure
 ```
